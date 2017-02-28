@@ -16,7 +16,7 @@
 ### 给出相同输入，总是返回相同的输出
 * Math.random()是非纯函数
 * 多个输入值映射到相同的输出值，也是纯函数。例如：
-```
+```javascript
 const highpass = (cutoff, value) => value >= cutoff;
 ```
 
@@ -24,7 +24,7 @@ const highpass = (cutoff, value) => value >= cutoff;
 * 不可变性 - 如果一个函数修改一个对象参数或者数组参数上的属性，那么它就会修改在函数外部可以访问的状态。纯函数不能修改外部状态。
 
 考虑如下 addToCart() 函数，该函数是一个非纯函数，会修改状态：
-```
+```javascript
 // 非纯的 addToCart 修改已有的购物车
 const addToCart = (cart, item, quantity) => {
   cart.items.push({
@@ -59,7 +59,7 @@ test('addToCart()', assert => {
 ```
 
 现在考虑如下版本：
-```
+```javascript
 // 纯函数 addToCart() 返回一个新购物车，不会修改原始购物车
 const addToCart = (cart, item, quantity) => {
   const newCart = lodash.cloneDeep(cart);
