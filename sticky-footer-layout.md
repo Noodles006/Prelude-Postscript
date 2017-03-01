@@ -138,4 +138,3 @@ body {
 You could even add a header above that or more stuff below. The trick with flexbox is either:
  - ```flex: 1``` on the child you want to grow to fill the space (the content, in our case).
  - or, ```margin-top: auto``` to push the child away as far as it will go from the neighbor (or whichever direction margin is needed).
-![]({{site.baseurl}}//2.gif)
