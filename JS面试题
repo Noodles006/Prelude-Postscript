@@ -1,0 +1,13 @@
+1. Number('') == parseInt('') // false
+
+2. // a.js
+console.log('this comes from external scripts.');
+
+// html
+<script src="a.js">
+console.log('this comes from inline scripts');
+</script>
+
+what's the output in console?
+
+3.
