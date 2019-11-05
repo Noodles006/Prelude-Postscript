@@ -13,3 +13,11 @@
 4. Number conversions
 
 ![number_convertion](./images/number_convertion.png)
+
+5. Object type basics
+
+![object_basic](./images/object_basics.png)
+
+6. Equality comparison
+
+![equality_comparison](./images/equality_comparison.png)
