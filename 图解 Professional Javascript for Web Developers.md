@@ -21,3 +21,7 @@
 6. Equality comparison
 
 ![equality_comparison](./images/equality_comparison.png)
+
+7. Javascript object layout
+
+![javascript_object_layout](./images/javascript_object_layout.jpg)
