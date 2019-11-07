@@ -1,4 +1,4 @@
-## No extra words, just images
+## No Extra Words, Just Images
 
 
 1. Javascript implementations
