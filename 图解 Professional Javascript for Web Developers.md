@@ -1,3 +1,6 @@
+## No extra words, just images
+
+
 1. Javascript implementations
 
 ![Javascript implementations](./images/javascript_implementations.png)
@@ -25,3 +28,8 @@
 7. Javascript object layout
 
 ![javascript_object_layout](./images/javascript_object_layout.jpg)
+
+8. Inheritance
+
+![inheritance_prototype_chaining](./images/inheritance_prototype_chaining.png)
+![combination_inheritance](./images/combination_inheritance.png)
