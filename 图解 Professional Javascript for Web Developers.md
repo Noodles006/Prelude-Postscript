@@ -33,3 +33,4 @@
 
 ![inheritance_prototype_chaining](./images/inheritance_prototype_chaining.png)
 ![combination_inheritance](./images/combination_inheritance.png)
+![parasitic_combination_inheritance](./images/parasitic_combination_inheritance.png)
