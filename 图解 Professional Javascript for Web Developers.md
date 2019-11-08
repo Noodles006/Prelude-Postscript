@@ -17,9 +17,9 @@
 
 ![number_convertion](./images/number_convertion.png)
 
-5. Object type basics
+5. InstanceOf
 
-![object_basic](./images/object_basics.png)
+![instanceof](./images/instanceof.png)
 
 6. Equality comparison
 
