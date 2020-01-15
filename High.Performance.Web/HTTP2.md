@@ -4,6 +4,8 @@
 
 * [Youtube Video](https://www.youtube.com/watch?reload=9&v=r5oT_2ndjms)
 
+* [HTTP2 180 Tiles Image Demo](https://http2.golang.org/gophertiles)
+
 # Benefits
 
 HTTP/2 will make our applications faster, simpler, and more robust — a rare combination — by allowing us to undo many of the HTTP/1.1 workarounds previously done within our applications and address these concerns within the transport layer itself. Even better, it also opens up a number of entirely new opportunities to optimize our applications and improve performance!
