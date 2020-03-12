@@ -2,6 +2,10 @@
 
 ## 水平居中
 
+- text-align: center
+- width + margin: auto
+- flex
+
 ### 内联元素、块级内联元素 (inline、inline-*)
 
 - 设置父元素为块级元素 (block)
