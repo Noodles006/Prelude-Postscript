@@ -80,37 +80,45 @@ const element = {
 };
 ```
 
-### 元素与组件
+### 术语
 
 - React 元素
   
-  元素是构成 React 应用的最小砖块，它描述了你在屏幕上想看到的内容。
-  
-  不同于浏览器 DOM 元素，React 元素是开销极小的普通对象。ReactDOM 负责更新 DOM 来与 React 元素保持一致。
+  最小单元，用于描述 UI 内容。
 
 - 组件
   
   组件是由元素构成的独立可复用的代码片段，并对每个片段进行独立构思。
 
-  - 函数组件
+- *DOM 元素*
+  
+  `ReactDOM` 负责更新 DOM 来与 React 元素保持一致。
 
-    ```javascript
-    function Welcome(props) {
-        return <h1>Hello, {props.name}</h1>;
-    }
-    ```
+### 面向组件编程
 
-  - 类组件
+*面向函数编程。*
 
-    ```javascript
-    class Welcome extends React.Component {
-        render() {
-            return <h1>Hello, {this.props.name}</h1>;
-        }
-    }
-    ```
+#### 函数组件
 
-### Props
+```javascript
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+
+#### 类组件
+
+```javascript
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
+
+#### 组件渲染
+
+##### Props
 
 ```javascript
 const element = <Welcome name="Sara" />;
@@ -122,7 +130,7 @@ React 将 JSX 所接收的属性（attributes）以及子组件（children）转
 
 *那么 UI 如何响应变化呢？*
 
-### State
+##### State
 
 State 与 props 类似，但是 state 是私有的，并且完全受控于当前组件。
 
@@ -149,7 +157,7 @@ ReactDOM.render(
 );
 ```
 
-### 生命周期
+### 组件生命周期
 
 ```javascript
 class Clock extends React.Component {
@@ -194,6 +202,8 @@ ReactDOM.render(
 );
 ```
 
+[生命周期图谱](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
+
 ### 事件处理
 
 - React 事件的命名采用小驼峰式（camelCase），而不是纯小写
@@ -216,4 +226,6 @@ ReactDOM.render(
 </button>
 ```
 
-### 
+### React 哲学
+
+**Next Time !**
