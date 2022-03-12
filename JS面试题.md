@@ -7,23 +7,26 @@
 ### Event Loop
 
 JS单线程，通过事件循环机制，保障js非阻塞执行。
-宏任务：script脚本、定时器、事件回调
-微任务：Promise、Mutation observer
+
+- 宏任务：script脚本、定时器、事件回调
+- 微任务：Promise、Mutation observer
 
 浏览器与Node的事件循环机制对比：
-浏览器JS：宏任务 --> 微任务（直到队列为空）--> UI渲染（可选）--> 宏任务
-Node.js：宏任务 (Timers、Pending Callbacks、Idel、Poll、Check、Close callbacks) --> process.nextTick --> 微任务 --> 宏任务
+- 浏览器JS：宏任务 --> 微任务（直到队列为空）--> UI渲染（可选）--> 宏任务
+- Node.js：宏任务 (Timers、Pending Callbacks、Idel、Poll、Check、Close callbacks) --> process.nextTick --> 微任务 --> 宏任务
 
 ### 浏览器缓存
 
 1. 强缓存
 通过Cache-Control: max-age=xxx、Expires (HTTP1.1以下)判断资源缓存时间是否过期，没有过期则从本地缓存空间直接读取。
 2. 协商缓存
-Etag、If-None-Match (优先)
-Last-Modified、If-Modified-Since (缺点：1.单位是秒，可能在秒级内修改文件；2.绝对时间，服务端时间不一致，容易判定失效)
+- Etag、If-None-Match (优先)
+- Last-Modified、If-Modified-Since (缺点：1.单位是秒，可能在秒级内修改文件；2.绝对时间，服务端时间不一致，容易判定失效)
+
 命中协商缓存时，服务端返回状态码304，浏览器从本地读取缓存；没有命中，服务端返回状态码200和最新的资源，浏览器重新设置缓存。
 
 浏览器资源缓存位置，按照优先级依次是：
+
 Service Worker --> Memory Cache (关闭tab页失效) --> Disk Cache --> Push Cache（HTTP2.0，Session有效）
 
 Cache-Control字段：
@@ -38,7 +41,9 @@ Cache-Control字段：
 
 ### 垃圾回收机制
 1. V8垃圾回收机制
+
 - 新生代算法
+
 当FROM空间占满时，检查失活对象并销毁，交换FROM、TO空间指向，完成一次新生代GC。TO空间中的对象在下一次检查依然失活的话，会被移动到老生代空间中；TO空间的单个对象占比大小超过25%，也会被移动到老生代空间中。
 - 老生代算法
   - 标记清除算法
