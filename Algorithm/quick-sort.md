@@ -42,6 +42,7 @@ function partition2(arr, left, right) {
     arr[to] = temp;
   }
 
+  // move all values less than pivotVal to left
   for (let i = left; i < right; i++) {
     if (arr[i] < pivotVal) {
       pivotIndex++;
@@ -49,6 +50,7 @@ function partition2(arr, left, right) {
     }
   }
 
+  // put pivotVal to it's position
   swap(arr, pivotIndex + 1, right);
 
   return pivotIndex + 1;
