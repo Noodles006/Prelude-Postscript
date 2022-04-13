@@ -2,6 +2,27 @@
 
 ### Cookie
 
+Cookie是服务器发送到用户浏览器并保存在本地的一小块数据（4KB），它会在浏览器下一次向同一服务器再发起请求时被携带并发送到服务器上。用于解决HTTP协议无状态的问题，如记录用户登录状态、跟踪分析用户行为数据等。由于服务器指定cookie后，浏览器每次请求都会携带cookie数据，会带来额外的性能开销（尤其在移动端环境下），客户端数据存储技术用storage api或indexDB取代cookie。
+
+#### Set-Cookie & Cookie
+
+Set-Cookie响应头部的一个字段，Cookie请求头部的一个字段。
+
+服务器使用Set-Cookie响应头部向用户浏览器发送Cookie信息。下次对同一服务器发起的每一次请求，浏览器都会将之前保存的cookie信息通过Cookie请求头部再次发送给服务器。
+
+#### 属性
+
+- Expires 指定过期时间，设定的日期和时间只与客户端有关，而不是服务器；
+- Max-Age 指定有效期，区别于Expires，是指定一段时间；
+- Secure 只能通过被HTTPS协议加密过的请求发送给服务端；可以预防man-in-the-middle攻击；
+- HttpOnly javascript无法访问，仅服务端可以访问；有助于缓解XSS攻击；
+- Domian 指定哪些主机可以接受Cookie，默认是origin，不包含子域名；
+- Path 指定主机下的哪些路径可以接受Cookie；
+- SameSite 允许服务器要求某个cookie在跨站请求时不会被发送；可以阻止CSRF攻击；
+  - None 浏览器在同站、跨站请求下继续发送cookies；
+  - Strict 只在相同站点下发送cookie；
+  - Lax 与Strict类似；一些情况例外：在跳转新页面且是GET请求时，才会发送跨站cookies；
+
 ### 跨域
 
 ### Event Loop
